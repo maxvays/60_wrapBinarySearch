@@ -8,7 +8,7 @@ public class UserOfBinarySearch {
 
     public static void main(String[] commandLine) {
         System.out.println();
-        
+
         /* create a list whose values are easy to
            distinguish from indexes */
         Integer valNotIndex = 111;
@@ -26,11 +26,11 @@ public class UserOfBinarySearch {
         for( int i = 0; i < orderedList.size(); i++) {
             findMe = orderedList.get( i);
             foundAt = orderedList.indexOf( findMe);
-            System.out.println( 
+            System.out.println(
                 "Value " + findMe
               + " was found at index " + foundAt
               + ". That's correct, eh? " + (foundAt == i)
-              );
+              + " The cost was: " + orderedList.cost() + ", expected cost is less than or equal to " + Math.ceil(Math.log(orderedList.size())/Math.log(2.0)));
         }
         System.out.println();
 
@@ -56,6 +56,6 @@ public class UserOfBinarySearch {
           + " value " + value
           + " \"found\" at index " + foundAt
           + ". That's correct, eh? " + (foundAt < 0)
-          );
+          + " The cost was: " + orderedList.cost() + ", expected cost is less than or equal to " + Math.ceil(Math.log(orderedList.size())/Math.log(2.0)));
      }
 }
