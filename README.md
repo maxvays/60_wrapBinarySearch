@@ -15,5 +15,12 @@ going from negative infinity and increasing, passing through 0 at x = 1, and the
 slowing down the growth significantly.
 
 
-0. The problem is, given an ordered list of integers, find the index of a particular value.
-1. 
+0. The problem is: given an ordered list of integers, find the index of a particular value.
+1. The recursive abstraction is when asked to find a value in a list of size n, the recursive
+abstraction finds the value in the correct half of the list with size n / 2.
+2.  The if(low > high) is the decision between base or recursive cases.
+    The return -2 is the solution to the base case
+    The solution to the recursive cases:
+      There is no combiner
+      The recursive abstraction is the call to return indexOf_recursive( findMe , low, pageToCheck -1, false);
+      There is no leftover.
